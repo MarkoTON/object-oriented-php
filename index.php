@@ -19,6 +19,7 @@
   echo $userOne->email . '<br>';
   echo $userOne->addFriend() . '<br>';
 
+  // Moze da se menja jer su oba PUBLIC
   $userTwo->username = 'yoshi';
   $userTwo->email = 'yoshi@thenetninja.co.uk';
 
