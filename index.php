@@ -11,8 +11,10 @@
       $this->email = $email;
     }
 
-    public function addFriend(){
+    public function addFriend($met){
       //return "added a new friend";
+      echo "$met";
+      echo "<br>";
       return "$this->username just added a new friend";
     }
 
@@ -23,11 +25,11 @@
 
   echo $userOne->username . '<br>';
   echo $userOne->email . '<br>';
-  echo $userOne->addFriend() . '<br>';
+  echo $userOne->addFriend("Metallica") . '<br>';
 
   echo $userTwo->username . '<br>';
   echo $userTwo->email . '<br>';
-  echo $userTwo->addFriend() . '<br>';
+  echo $userTwo->addFriend("Nirvana") . '<br>';
 
 ?>
 
