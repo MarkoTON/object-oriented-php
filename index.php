@@ -3,6 +3,7 @@
   class User {
 
     public $username;
+    // private $email;
     protected $email;
     public $role = 'member';
 
@@ -39,10 +40,12 @@
 
     public $level;
     public $role = 'admin';
+    // public $email;
 
     public function __construct($username, $email, $level){
       parent::__construct($username, $email);
       $this->level = $level; 
+      // $this->email = $email;
     }
 
     public function message(){
