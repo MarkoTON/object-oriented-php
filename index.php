@@ -33,8 +33,9 @@
   class AdminUser extends User {
 
     public $level;
-
+    // Ovaj ovde __constuct overwrite-je prethodni
     public function __construct($username, $email, $level){
+      // Nasledjuje perent/child propertije
       parent::__construct($username, $email);
       $this->level = $level; 
     }
@@ -43,7 +44,7 @@
 
   $userOne = new User('mario', 'mario@thenetninja.co.uk');
   $userTwo = new User('luigi', 'luigi@thenetninja.co.uk');
-  $userThree = new AdminUser('yoshi', 'yoshi@thenetninja.co.uk', 5);
+  $userThree = new AdminUser('Sepultura', 'yoshi@thenetninja.co.uk', 5);
 
   echo $userThree->level . '<br>';
   echo $userThree->username . '<br>';
