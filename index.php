@@ -4,8 +4,10 @@
 
     public $username;
     private $email;
+    // public $username = "John";
+    // private $email = "test@gmail.com";
 
-    public function __construct($username, $email){
+    public function __construct($username = "Metallica", $email = "Demo@demo.com"){
       //$this->username = 'ken';
       $this->username = $username;
       $this->email = $email;
@@ -21,24 +23,38 @@
       return $this->email;
     }
 
+    // getters
+    public function getUsername(){
+      return $this->username;
+    }
+
     // setters
-    public function setEmail($username){
-      if(strpos($username, '@') > -1){
-        $this->email = $username;
+    public function setEmail($email){
+      if(strpos($email, '@') > -1){
+        $this->email = $email;
       };
+    }
+
+    // setters
+    public function setUsername($username){
+      $this->username = $username;
     }
 
   }
 
   $userOne = new User('mario', 'mario@thenetninja.co.uk');
   $userTwo = new User('luigi', 'luigi@thenetninja.co.uk');
+  $userThree = new User();
 
   echo $userOne->getEmail() . '<br>';
   echo $userTwo->getEmail() . '<br>';
+  echo $userThree->getEmail() . '<br>';
   
-  $userTwo->setEmail('yoshi@thenetninja.co.uk');
+  $userTwo->setEmail('metallica@thenetninja.co.uk');
+  $userTwo->setUsername('Marko');
   
-  echo $userTwo->getEmail() . '<br>';
+  echo $userTwo->getUsername() . '<br>'; // Marko
+  echo $userTwo->getEmail() . '<br>'; // metallica@thenetninja.co.uk
 
 ?>
 
