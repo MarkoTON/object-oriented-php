@@ -3,7 +3,8 @@
   class User {
 
     public $username;
-    private $email;
+    public $email;
+    // private $email;
 
     public function __construct($username, $email){
       //$this->username = 'ken';
@@ -22,6 +23,7 @@
   $userTwo = new User('luigi', 'luigi@thenetninja.co.uk');
 
   echo $userOne->email;
+  echo "<br>";
   echo $userTwo->email;
 
 ?>
