@@ -18,7 +18,7 @@
     }
 
     public function message(){
-      return "$this->email sent a new message";
+      return "$this->email sent a new message!!!";
     }
 
     // getters
@@ -45,7 +45,10 @@
       $this->level = $level; 
     }
 
+    // Kada se doda nova funkcija/metoda onda prethodna ne vezi. Opet se overwrite-je..
+    // public function message($email){
     public function message(){
+      // return "$email, an admin sent a new message";
       return "an admin sent a new message";
     }
 
@@ -53,13 +56,16 @@
 
   $userOne = new User('mario', 'mario@thenetninja.co.uk');
   $userTwo = new User('luigi', 'luigi@thenetninja.co.uk');
-  $userThree = new AdminUser('yoshi', 'yoshi@thenetninja.co.uk', 5);
+  $userThree = new AdminUser('Metallica', 'yoshi@thenetninja.co.uk', 5);
 
   echo $userOne->role . '<br>';
+  echo $userTwo->role . '<br>';
   echo $userThree->role . '<br>';
 
   echo $userOne->message() . '<br>';
+  echo $userTwo->message() . '<br>';
   echo $userThree->message() . '<br>'; 
+  // echo $userThree->message("Korn") . '<br>'; 
 
 ?>
 
